@@ -1,6 +1,7 @@
 plugins {
     id(Deps.Plugins.application)
     id(Deps.Plugins.kotlinAndroid)
+    id(Deps.Plugins.kotlinxSerialization)
 }
 
 android {
@@ -31,19 +32,24 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
 
     implementation(Deps.JetBrains.kotlin)
+    implementation(Deps.JetBrains.serialization)
+
     implementation(Deps.AndroidX.core)
     implementation(Deps.AndroidX.appcompat)
-    implementation(Deps.Android.material)
     implementation(Deps.AndroidX.constraint)
+    implementation(Deps.Android.material)
+
+    implementation(Deps.Squareup.retrofit)
+    implementation(Deps.Squareup.serializationFactory)
+
+    implementation(Deps.Koin.koinAndroid)
+    implementation(Deps.Koin.koinPlugin)
+
     testImplementation(Deps.junit)
     androidTestImplementation(Deps.AndroidX.junit)
     androidTestImplementation(Deps.AndroidX.espresso)
