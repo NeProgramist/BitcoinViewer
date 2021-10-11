@@ -1,7 +1,8 @@
-package com.example.data.framework.local
+package com.example.data.framework.local.rate
 
 import com.example.core.datasources.RequestTimeDataSource
 import com.example.core.datasources.RequestTimeDataSource.Companion.DEFAULT_LAST_UPDATE
+import com.example.data.framework.local.PreferenceManager
 import com.github.michaelbull.result.Err
 import com.github.michaelbull.result.Ok
 import com.github.michaelbull.result.Result

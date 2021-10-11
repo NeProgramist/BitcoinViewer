@@ -1,7 +1,8 @@
-package com.example.data.framework.local
+package com.example.data.framework.local.rate
 
 import com.example.core.datasources.BitcoinRateDataSource
 import com.example.core.domain.models.BitcoinUsdRate
+import com.example.data.framework.local.PreferenceManager
 import com.github.michaelbull.result.Err
 import com.github.michaelbull.result.Ok
 import com.github.michaelbull.result.Result
