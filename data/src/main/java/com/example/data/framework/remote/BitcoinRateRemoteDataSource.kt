@@ -14,6 +14,11 @@ class BitcoinRateRemoteDataSource(
         val currency = api.getBitcoinCurrency().bpi.usd.rateFloat
         Ok(BitcoinUsdRate(currency))
     } catch (e: Exception) {
+        /*
+            In bigger cases I prefer to have a wrapper over kotlin Exception, like DomainException,
+            HttpException, UnexpectedException and so on
+            but in this case I think it's over engineering
+        */
         Log.e(this::class.java.simpleName, e.message ?: "No message")
         Err(e)
     }
