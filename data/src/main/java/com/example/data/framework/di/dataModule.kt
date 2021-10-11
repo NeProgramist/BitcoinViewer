@@ -4,9 +4,9 @@ import com.example.core.datasources.BitcoinRateDataSource
 import com.example.core.datasources.RequestTimeDataSource
 import com.example.core.di.local
 import com.example.core.di.remote
-import com.example.data.framework.local.BitcoinRateLocalDataSource
+import com.example.data.framework.local.rate.BitcoinRateLocalDataSource
 import com.example.data.framework.local.PreferenceManager
-import com.example.data.framework.local.RequestTimeRemoteDataSource
+import com.example.data.framework.local.rate.RequestTimeRemoteDataSource
 import com.example.data.framework.remote.BitcoinRateApi
 import com.example.data.framework.remote.BitcoinRateRemoteDataSource
 import com.example.data.framework.remote.provideApi

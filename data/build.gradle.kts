@@ -2,6 +2,7 @@ plugins {
     id(Deps.Plugins.library)
     id(Deps.Plugins.kotlinAndroid)
     id(Deps.Plugins.kotlinxSerialization)
+    kotlin("kapt")
 }
 
 android {
@@ -50,6 +51,12 @@ dependencies {
 
     implementation(Deps.Koin.koinAndroid)
     implementation(Deps.Koin.koinPlugin)
+
+    implementation(Deps.AndroidX.room)
+    implementation(Deps.AndroidX.roomCoroutines)
+    kapt(Deps.AndroidX.roomCompiler)
+
+    implementation(Deps.AndroidX.paging)
 
     implementation(Deps.result)
 
