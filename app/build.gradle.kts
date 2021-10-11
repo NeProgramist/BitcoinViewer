@@ -5,6 +5,7 @@ plugins {
 
 android {
     compileSdkVersion(Conf.Sdk.compile)
+    buildToolsVersion = Conf.App.buildToolsVersion
 
     defaultConfig {
         applicationId = Conf.App.id
@@ -40,11 +41,24 @@ android {
 dependencies {
 
     implementation(Deps.JetBrains.kotlin)
+    implementation(Deps.Android.material)
     implementation(Deps.AndroidX.core)
     implementation(Deps.AndroidX.appcompat)
-    implementation(Deps.Android.material)
     implementation(Deps.AndroidX.constraint)
+
+    implementation(Deps.AndroidX.viewModel)
+    implementation(Deps.AndroidX.liveData)
+
+    implementation(Deps.Koin.koinAndroid)
+    implementation(Deps.Koin.koinPlugin)
+    implementation(Deps.Koin.koinViewModel)
+
+    implementation(Deps.result)
+
     testImplementation(Deps.junit)
     androidTestImplementation(Deps.AndroidX.junit)
     androidTestImplementation(Deps.AndroidX.espresso)
+
+    implementation(project(Modules.data))
+    implementation(project(Modules.core))
 }

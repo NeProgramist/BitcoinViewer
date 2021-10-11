@@ -1,14 +1,14 @@
 plugins {
-    id(Deps.Plugins.application)
+    id(Deps.Plugins.library)
     id(Deps.Plugins.kotlinAndroid)
     id(Deps.Plugins.kotlinxSerialization)
 }
 
 android {
     compileSdkVersion(Conf.Sdk.compile)
+    buildToolsVersion = Conf.App.buildToolsVersion
 
     defaultConfig {
-        applicationId = Conf.App.id
         minSdkVersion(Conf.Sdk.min)
         targetSdkVersion(Conf.Sdk.target)
         versionCode = Conf.App.versionCode
@@ -43,6 +43,7 @@ dependencies {
     implementation(Deps.AndroidX.appcompat)
     implementation(Deps.AndroidX.constraint)
     implementation(Deps.Android.material)
+    implementation(Deps.AndroidX.pref)
 
     implementation(Deps.Squareup.retrofit)
     implementation(Deps.Squareup.serializationFactory)
@@ -50,7 +51,11 @@ dependencies {
     implementation(Deps.Koin.koinAndroid)
     implementation(Deps.Koin.koinPlugin)
 
+    implementation(Deps.result)
+
     testImplementation(Deps.junit)
     androidTestImplementation(Deps.AndroidX.junit)
     androidTestImplementation(Deps.AndroidX.espresso)
+
+    implementation(project(Modules.core))
 }
