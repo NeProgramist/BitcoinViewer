@@ -44,7 +44,9 @@ dependencies {
     implementation(Deps.Android.material)
     implementation(Deps.AndroidX.core)
     implementation(Deps.AndroidX.appcompat)
+    implementation(Deps.AndroidX.fragmentx)
     implementation(Deps.AndroidX.constraint)
+    implementation(Deps.AndroidX.paging)
 
     implementation(Deps.AndroidX.viewModel)
     implementation(Deps.AndroidX.liveData)

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BitcoinViewer</string>
+    <string name="rate_placeholder">1 btc = %f$</string>
+    <string name="refill">Refill</string>
+    <string name="transaction">Transaction</string>
+    <string name="add_transaction">Add Transaction</string>
 </resources>

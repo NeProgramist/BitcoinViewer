@@ -14,10 +14,4 @@ data class TransactionEntity(
     val date: Date,
 )
 
-fun TransactionEntity.toTransaction() = Transaction(amount, type, date)
-fun Transaction.toTransactionEntity() = TransactionEntity(
-    id = UUID.randomUUID(),
-    amount = amount,
-    type = type,
-    date = date,
-)
+fun Transaction.toTransactionEntity() = TransactionEntity(id, amount, type, date)

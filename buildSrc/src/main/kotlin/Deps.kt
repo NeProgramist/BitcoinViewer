@@ -30,6 +30,7 @@ object Deps {
     object AndroidX {
         const val core = "androidx.core:core-ktx:1.6.0"
         const val appcompat = "androidx.appcompat:appcompat:1.3.1"
+        const val fragmentx = "androidx.fragment:fragment-ktx:$1.3.0"
         const val constraint = "androidx.constraintlayout:constraintlayout:2.1.1"
         const val junit = "androidx.test.ext:junit:1.1.3"
         const val espresso = "androidx.test.espresso:espresso-core:3.4.0"

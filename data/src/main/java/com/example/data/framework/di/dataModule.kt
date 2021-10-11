@@ -1,12 +1,14 @@
 package com.example.data.framework.di
 
 import androidx.room.Room
+import com.example.core.datasources.BalanceDataSource
 import com.example.core.datasources.BitcoinRateDataSource
 import com.example.core.datasources.RequestTimeDataSource
 import com.example.core.di.local
 import com.example.core.di.remote
 import com.example.data.framework.local.rate.BitcoinRateLocalDataSource
 import com.example.data.framework.local.PreferenceManager
+import com.example.data.framework.local.balance.BalanceLocalDataSource
 import com.example.data.framework.local.rate.RequestTimeRemoteDataSource
 import com.example.data.framework.local.transactions.TransactionsDatabase
 import com.example.data.framework.local.transactions.TransactionsLocalDataSource
@@ -29,6 +31,7 @@ val dataModule = module {
     single<BitcoinRateDataSource>(local) { BitcoinRateLocalDataSource(get()) }
     single<BitcoinRateDataSource>(remote) { BitcoinRateRemoteDataSource(get()) }
     single<RequestTimeDataSource> { RequestTimeRemoteDataSource(get()) }
+    single<BalanceDataSource> { BalanceLocalDataSource(get()) }
 
     single { TransactionsLocalDataSource(get()) }
 }
